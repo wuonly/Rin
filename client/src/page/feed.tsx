@@ -164,16 +164,6 @@ export function FeedPage({ id, TOC, clean }: { id: string, TOC: () => JSX.Elemen
                         })}
                       </p>
 
-                      {feed.createdAt !== feed.updatedAt && (
-                        <p
-                          className="text-gray-400 text-[12px]"
-                          title={new Date(feed.updatedAt).toLocaleString()}
-                        >
-                          {t("feed_card.updated$time", {
-                            time: timeago(feed.updatedAt),
-                          })}
-                        </p>
-                      )}
                     </div>
                     {counterEnabled && <p className='text-[12px] text-gray-400 font-normal link-line'>
                       <span className="font-bold"> {t("count.pv")} </span>
